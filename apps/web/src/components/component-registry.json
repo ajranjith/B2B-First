@@ -1,0 +1,147 @@
+{
+  "$schema": "./component-registry.schema.json",
+  "version": "1.0.0",
+  "components": {
+    "ui": {
+      "Button": {
+        "path": "./ui/button",
+        "export": "Button",
+        "category": "ui",
+        "description": "Primary button component",
+        "aliases": ["PrimaryButton"]
+      },
+      "Card": {
+        "path": "./ui/card",
+        "export": ["Card", "CardContent", "CardDescription", "CardFooter", "CardHeader", "CardTitle"],
+        "category": "ui",
+        "description": "Card container components"
+      },
+      "Dialog": {
+        "path": "./ui/dialog",
+        "export": ["Dialog", "DialogContent", "DialogDescription", "DialogFooter", "DialogHeader", "DialogTitle", "DialogTrigger"],
+        "category": "ui",
+        "description": "Modal dialog components"
+      },
+      "Input": {
+        "path": "./ui/input",
+        "export": "Input",
+        "category": "ui",
+        "description": "Text input component"
+      },
+      "Label": {
+        "path": "./ui/label",
+        "export": "Label",
+        "category": "ui",
+        "description": "Form label component"
+      },
+      "Select": {
+        "path": "./ui/select",
+        "export": ["Select", "SelectContent", "SelectItem", "SelectTrigger", "SelectValue", "SelectGroup", "SelectLabel", "SelectSeparator"],
+        "category": "ui",
+        "description": "Select dropdown components"
+      },
+      "Table": {
+        "path": "./ui/table",
+        "export": ["Table", "TableBody", "TableCaption", "TableCell", "TableFooter", "TableHead", "TableHeader", "TableRow"],
+        "category": "ui",
+        "description": "Table components"
+      },
+      "Tabs": {
+        "path": "./ui/tabs",
+        "export": ["Tabs", "TabsContent", "TabsList", "TabsTrigger"],
+        "category": "ui",
+        "description": "Tabs components"
+      },
+      "Badge": {
+        "path": "./ui/badge",
+        "export": "Badge",
+        "category": "ui",
+        "description": "Badge component"
+      },
+      "Alert": {
+        "path": "./ui/alert",
+        "export": ["Alert", "AlertDescription", "AlertTitle"],
+        "category": "ui",
+        "description": "Alert components"
+      },
+      "Avatar": {
+        "path": "./ui/avatar",
+        "export": ["Avatar", "AvatarFallback", "AvatarImage"],
+        "category": "ui",
+        "description": "Avatar components"
+      },
+      "Checkbox": {
+        "path": "./ui/checkbox",
+        "export": "Checkbox",
+        "category": "ui",
+        "description": "Checkbox component"
+      },
+      "DropdownMenu": {
+        "path": "./ui/dropdown-menu",
+        "export": ["DropdownMenu", "DropdownMenuCheckboxItem", "DropdownMenuContent", "DropdownMenuGroup", "DropdownMenuItem", "DropdownMenuLabel", "DropdownMenuPortal", "DropdownMenuRadioGroup", "DropdownMenuRadioItem", "DropdownMenuSeparator", "DropdownMenuShortcut", "DropdownMenuSub", "DropdownMenuSubContent", "DropdownMenuSubTrigger", "DropdownMenuTrigger"],
+        "category": "ui",
+        "description": "Dropdown menu components"
+      },
+      "Form": {
+        "path": "./ui/form",
+        "export": ["Form", "FormControl", "FormDescription", "FormField", "FormItem", "FormLabel", "FormMessage", "useFormField"],
+        "category": "ui",
+        "description": "Form components with React Hook Form integration"
+      },
+      "Popover": {
+        "path": "./ui/popover",
+        "export": ["Popover", "PopoverContent", "PopoverTrigger"],
+        "category": "ui",
+        "description": "Popover components"
+      },
+      "ScrollArea": {
+        "path": "./ui/scroll-area",
+        "export": ["ScrollArea", "ScrollBar"],
+        "category": "ui",
+        "description": "Scrollable area components"
+      },
+      "Separator": {
+        "path": "./ui/separator",
+        "export": "Separator",
+        "category": "ui",
+        "description": "Separator component"
+      },
+      "Skeleton": {
+        "path": "./ui/skeleton",
+        "export": "Skeleton",
+        "category": "ui",
+        "description": "Loading skeleton component"
+      },
+      "Sonner": {
+        "path": "./ui/sonner",
+        "export": "Toaster",
+        "category": "ui",
+        "description": "Toast notification component"
+      },
+      "Tooltip": {
+        "path": "./ui/tooltip",
+        "export": ["Tooltip", "TooltipContent", "TooltipProvider", "TooltipTrigger"],
+        "category": "ui",
+        "description": "Tooltip components"
+      }
+    },
+    "dealer": {
+      "MiniCart": {
+        "path": "./dealer/MiniCart",
+        "export": "default",
+        "category": "dealer",
+        "description": "Mini shopping cart component"
+      },
+      "MiniCartButton": {
+        "path": "./dealer/MiniCartButton",
+        "export": "default",
+        "category": "dealer",
+        "description": "Mini cart trigger button"
+      }
+    }
+  },
+  "aliases": {
+    "PrimaryButton": "Button"
+  },
+  "overrides": {}
+}

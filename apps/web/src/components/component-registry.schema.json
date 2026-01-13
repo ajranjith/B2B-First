@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Component Registry",
+  "description": "Schema for component registry configuration",
+  "type": "object",
+  "required": ["version", "components"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "JSON Schema reference"
+    },
+    "version": {
+      "type": "string",
+      "description": "Registry version",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    },
+    "components": {
+      "type": "object",
+      "description": "Component categories and their components",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/definitions/component"
+        }
+      }
+    },
+    "aliases": {
+      "type": "object",
+      "description": "Component name aliases",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "overrides": {
+      "type": "object",
+      "description": "Component implementation overrides for swapping",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "export": {
+            "oneOf": [
+              { "type": "string" },
+              { "type": "array", "items": { "type": "string" } }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "component": {
+      "type": "object",
+      "required": ["path", "export"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Relative path to component file from components directory"
+        },
+        "export": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" } }
+          ],
+          "description": "Export name(s) from the module"
+        },
+        "category": {
+          "type": "string",
+          "description": "Component category"
+        },
+        "description": {
+          "type": "string",
+          "description": "Component description"
+        },
+        "aliases": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Alternative names for the component"
+        },
+        "deprecated": {
+          "type": "boolean",
+          "description": "Whether the component is deprecated"
+        },
+        "replacement": {
+          "type": "string",
+          "description": "Replacement component if deprecated"
+        }
+      }
+    }
+  }
+}
