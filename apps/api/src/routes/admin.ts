@@ -7,19 +7,21 @@ import { EmailService, DealerCreateSchema } from 'shared';
 import * as fs from 'fs';
 import * as path from 'path';
 import { pipeline } from 'stream/promises';
-import { createHash } from 'crypto';
+import { createHash, randomBytes } from 'crypto';
 
 const SALT_ROUNDS = 10;
 
 /**
- * Helper to generate a secure random password
+ * Helper to generate a secure random password using cryptographically secure random bytes
  */
 function generateSecurePassword(): string {
     const length = 12;
     const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+";
+    const randomBytesBuffer = randomBytes(length);
     let retVal = "";
     for (let i = 0; i < length; ++i) {
-        retVal += charset.charAt(Math.floor(Math.random() * charset.length));
+        // Use modulo to map random byte to charset index
+        retVal += charset.charAt(randomBytesBuffer[i] % charset.length);
     }
     return retVal;
 }
