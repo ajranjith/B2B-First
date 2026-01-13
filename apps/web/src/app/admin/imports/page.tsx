@@ -11,20 +11,23 @@ import {
     flexRender,
     SortingState,
 } from '@tanstack/react-table';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
+    Button,
+    Badge,
+    Card,
+    CardContent,
+    Tabs,
+    TabsList,
+    TabsTrigger,
     Table,
     TableBody,
     TableCell,
     TableHead,
     TableHeader,
     TableRow,
-} from '@/components/ui/table';
+} from '@/components';
 import { Upload, Package, Clock, Truck, ChevronDown, ChevronUp, Download } from 'lucide-react';
-import api from '@/lib/api';
+import { api } from '@/lib';
 
 type ImportStatus = 'PROCESSING' | 'SUCCEEDED' | 'FAILED' | 'SUCCEEDED_WITH_ERRORS';
 type ImportType = 'PRODUCTS_GENUINE' | 'PRODUCTS_AFTERMARKET' | 'BACKORDERS' | 'FULFILLMENT';

@@ -2,15 +2,12 @@
 
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent } from '@/components/ui/card';
+import { Button, Input, Badge, Card, CardContent } from '@/components';
 import { Search, Filter, ShoppingCart, Loader2 } from 'lucide-react';
-import api from '@/lib/api';
+import { api } from '@/lib';
 import { toast } from 'sonner';
-import { useCart } from '@/hooks/useCart';
-import { useCartUI } from '@/context/CartContext';
+import { useCart } from '@/hooks';
+import { useCartUI } from '@/context';
 
 type PartType = 'GENUINE' | 'AFTERMARKET' | 'BRANDED';
 type SortOption = 'relevance' | 'price_asc' | 'price_desc' | 'stock';

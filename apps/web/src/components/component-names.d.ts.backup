@@ -8,31 +8,30 @@ import type { ComponentRegistry } from './registry-types';
 declare const registry: ComponentRegistry;
 
 // Component categories
-export type UiComponents = keyof typeof registry.components.ui;
 export type DealerComponents = keyof typeof registry.components.dealer;
+export type UiComponents = keyof typeof registry.components.ui;
 
 // All component names
-export type ComponentName = 
-  | 'Button'
-  | 'Card'
-  | 'Dialog'
-  | 'Input'
-  | 'Label'
-  | 'Select'
-  | 'Table'
-  | 'Tabs'
-  | 'Badge'
+export type ComponentName =
   | 'Alert'
   | 'Avatar'
+  | 'Badge'
+  | 'Button'
+  | 'Card'
   | 'Checkbox'
+  | 'Dialog'
   | 'DropdownMenu'
   | 'Form'
+  | 'Input'
+  | 'Label'
+  | 'MiniCart'
+  | 'MiniCartButton'
   | 'Popover'
   | 'ScrollArea'
+  | 'Select'
   | 'Separator'
   | 'Skeleton'
   | 'Sonner'
-  | 'Tooltip'
-  | 'MiniCart'
-  | 'MiniCartButton'
-;
+  | 'Table'
+  | 'Tabs'
+  | 'Tooltip';
